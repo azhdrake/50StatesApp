@@ -12,10 +12,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "database": "postgres://xbozdkwwggptei:4bdbd299d84d2b58f1353a9e464fe54e2ebba400eaacf977a129dbb949f318f0@ec2-107-22-195-114.compute-1.amazonaws.com:5432/dfed7jrpi7e86b",
     "dialect": "postgres"
   }
 }
