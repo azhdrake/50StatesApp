@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
-    <RouterView></RouterView>
+    <RouterView></RouterView> <!-- Router checks the URL to determine what content should be shown here. Users mappings from router/index.js -->
     <Footer></Footer>
   </div>
 </template>

@@ -4,7 +4,12 @@
       {{state.name}}
     </span>
     <p>
-      <input id="visited" class="m-2" type="checkbox" v-model="stateVisited" v-on:change="$emit('isVisited', stateName, stateVisited)"/>
+      <!-- The visited checkbox. Waits to be clicked and sends what state it is for when clicked to StateList.vue -->
+      <input id="visited" 
+             class="m-2" 
+             type="checkbox"
+             v-model="stateVisited" 
+             v-on:change="$emit('isVisited', stateName, stateVisited)"/>
     </p>
     <p>
       <router-link v-bind:to="{name: 'detail', params: {state: stateName}}">

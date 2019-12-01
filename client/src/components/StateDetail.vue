@@ -3,10 +3,12 @@
     <h2>
       The State of {{state.name}}
     </h2>
+    <!-- Determining whether page should display a visited / not visited message -->
     <p v-if="state.visited">You have visited this state</p>
     <p v-else>You have not visited this state, you looser you.</p>
 
     <div id="map-container">
+      <!-- setting up the map -->
       <l-map
              ref="stateMap"
              style="height: 100%; width : 100%"
@@ -34,22 +36,22 @@
         },
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       zoom: 2,
-      center: [44, -103],
+      center: [44, -103], // Center of USA.
       bounds: null
       }
     },
     mounted() {
       this.state.name = this.$route.params.state
-      this.$refs.stateMap.mapObject.dragging.disable()
+      this.$refs.stateMap.mapObject.dragging.disable() //Disables map dragging
       this.fetchStateData()
     },
     methods: {
       fetchStateData() {
         this.$stateServices.getOne(this.state.name).then(data => {
           this.state = data
-          this.zoom = data.zoom
-          this.center = [data.lat, data.lon]
-          this.$refs.stateMap.mapObject.flyTo(this.center, this.zoom)
+          this.zoom = data.zoom //gets zoom
+          this.center = [data.lat, data.lon] //gets state center
+          this.$refs.stateMap.mapObject.flyTo(this.center, this.zoom) //goes to state center using state zoom level
         }).catch(err=>console.error(err))
       }
     }

@@ -4,6 +4,7 @@ import About from "@/components/About"
 import StateDetail from "@/components/StateDetail"
 
 export default new Router({
+  // Gives the paths that the RouterView in App.vue uses. Links URLs to components.
   routes: [
     {
       path: "/",

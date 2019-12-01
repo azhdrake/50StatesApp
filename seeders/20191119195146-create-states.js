@@ -1,5 +1,7 @@
 'use strict';
 
+//all the state data we need in our database, ready to be seeded in.
+
 const states = [
   {
     "name": "Alabama",

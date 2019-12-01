@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\assets",
+    "\\client\\src\\components",
+    "\\client\\src\\router",
+    "\\client\\src\\services",
+    "\\config",
+    "\\routes"
+  ],
+  "SelectedNode": "\\client\\src\\components\\Header.vue",
+  "PreviewInSolutionExplorer": false
+}
